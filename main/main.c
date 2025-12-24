@@ -9,8 +9,8 @@
 #include "driver/gpio.h" // Control de GPIOs
 
 // PLACA Y MÓDULOS
-// ESPWROOM32 XX5R69 ← OV2640: 5V, GND, G15(SCL), G14(SDA), G22(VSYNC), G27(HREF), G13(PCLK), G4(XCLK), G5(D0), G18(D1), G19(D2), G21(D3), G36(D4), G39(D5), G34(D6), G35(D7), PWDN(-1), RESET(-1)
-//                   ← TFT SPI 240*320 V1.0: 5V, GND, G23(SCLK), G18(MOSI), G2(DC), G5(CS), G4(RST), G32(BLK)
+// ESPWROOM32 XX5R69 ← OV2640: 5V, GND, G15 (SCL), G14 (SDA), G22 (VSYNC), G27 (HREF), G13 (PCLK), G4 (XCLK), G5 (D0), G18 (D1), G19 (D2), G21 (D3), G36 (D4), G39 (D5), G34 (D6), G35 (D7), PWDN (-1), RESET (-1)
+//                   ← TFT SPI: 5V, GND, G23 (SCLK), G18 (MOSI), G2 (DC), G5 (CS), G4 (RST), G32 (BLK)
 
 // PINES DE LA PLACA
 #define PIN_TFT_DC 2 // Pin de comando/datos para TFT
