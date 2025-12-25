@@ -5,13 +5,13 @@
 #include "driver/gpio.h" // Control de GPIOs
 
 // PLACA Y MÓDULOS
-// ESPWROOM32 XX5R69 ← OV2640: 5V, GND, G15 (SCL), G14 (SDA), G22 (VSYNC), G27 (HREF), G13 (PCLK), G4 (XCLK), G5 (D0), G18 (D1), G19 (D2), G21 (D3), G36 (D4), G39 (D5), G34 (D6), G35 (D7)
-//                   ← TFT SPI: 5V, GND, G23 (SCLK), G12 (MOSI), G2 (DC), G13 (CS), G14 (RST), G32 (BLK)
+// ESPWROOM32 XX5R69 ← OV2640: 3.3V, GND, G15 (SCL), G14 (SDA), G22 (VSYNC), G27 (HREF), G13 (PCLK), G4 (XCLK), G5 (D0), G18 (D1), G19 (D2), G21 (D3), G36 (D4), G39 (D5), G34 (D6), G35 (D7)
+//                   ← TFT SPI: 5V, GND, G23 (SCLK), G12 (MOSI), G2 (DC), G25 (CS), G26 (RST), G32 (BLK)
 
 // PINES DE LA PLACA
 #define PIN_TFT_DC 2 // G2 comando/datos TFT
-#define PIN_TFT_CS 13 // G13 selección chip TFT
-#define PIN_TFT_RST 14 // G14 reset TFT
+#define PIN_TFT_CS 25 // G25 selección chip TFT
+#define PIN_TFT_RST 26 // G26 reset TFT
 #define PIN_TFT_BLK 32 // G32 retroiluminación TFT
 
 // RESOLUCIÓN DE CÁMARA
@@ -57,7 +57,7 @@ static const camera_config_t configuracion_camara =
 // VARIABLES GLOBALES
 spi_device_handle_t dispositivo_spi_tft; // Manejador SPI TFT
 
-// FUNCIONES
+// FUNCIONES MÍNIMAS
 // Envía comando a TFT
 void enviar_comando_tft(uint8_t comando)
 {
